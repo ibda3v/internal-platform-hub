@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: "17"
 
       - name: Grant execute permission
         run: chmod +x gradlew
@@ -26,7 +26,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
-          gradle-version: 8.4
+          gradle-version: "8.4"
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
